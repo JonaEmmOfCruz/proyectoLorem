@@ -1,11 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Generador · Lorem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <header class="header">
+            <div class="brand">
+                <h1>Lorem Modern</h1>
+                <span class="tagline">“Neque porro quisquam est...”</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="active">English</a>
+                <a href="#">Español</a>
+                <a href="#">Français</a>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="hero-section">
+                <h2>Lorem Ipsum <span>· Generador fluido</span></h2>
+                <div class="hero-quote">
+                    <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="info-panels">
+                    <div class="card">
+                        <h3>What is Lorem Ipsum?</h3>
+                        <p>Lorem Ipsum is a dummy text commonly used in design and web development to fill spaces while the final content is not ready.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Where does it come from?</h3>
+                        <p>Based on fragments of classical Latin literature. Reused for years as neutral text for mockups and layouts.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Why do we use it?</h3>
+                        <p>Letter distribution similar to real language. Judges typography, spacing and composition without distraction.</p>
+                    </div>
+                </div>
+
+                <div class="generator-panel">
+                    <div class="card generator-card">
+                        <h3>Where can I get some?</h3>
+
+                        <form id="lorem-form" class="form">
+                            <div class="param-control">
+                                <label for="paragraphs">Paragraphs:</label>
+                                <div class="input-wrapper">
+                                    <input 
+                                        type="number" 
+                                        id="paragraphs" 
+                                        name="paragraphs" 
+                                        min="1" 
+                                        max="10" 
+                                        value="5"
+                                        class="input"
+                                    >
+                                    <span class="input-glow"></span>
+                                </div>
+                            </div>
+
+                            <div class="param-control">
+                                <span class="label-with">Format:</span>
+                                <div class="toggle-group">
+                                    <label class="toggle">
+                                        <input type="radio" name="output-format" value="paragraphs" checked>
+                                        <span class="toggle-btn">paragraphs</span>
+                                    </label>
+                                    <label class="toggle">
+                                        <input type="radio" name="output-format" value="single">
+                                        <span class="toggle-btn">words (approx.)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-liquid" id="generate-btn">
+                                    <span class="btn-text">Generate Lorem Ipsum</span>
+                                    <span class="btn-bg"></span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="result-section">
+                            <div class="result-header">
+                                <span>Generated text:</span>
+                            </div>
+
+                            <div id="result-container" class="result-liquid-box">
+                                <div class="liquid-placeholder">
+                                    <i class="fas fa-rainbow"></i>
+                                    <p>Generated text will appear here...</p>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn-copy-liquid" id="copy-btn">
+                                <i class="fas fa-copy"></i>
+                                <span>Copy</span>
+                                <div class="copy-feedback"></div>
+                            </button>
+                        </div>
+
+                        <div id="error-message" class="glass-error">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+             <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-water"></i>
+                    <span>Generador · Lorem Modern</span>
+                </div>
+                <div class="footer-info">
+                    <p>De La Cruz Cerda Jonathan Emmanuel · Grupo: 6·A</p>
+                    <a href="https://github.com/JonaEmmOfCruz/proyectoLorem" target="_blank" class="glass-link">
+                        Repository
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
