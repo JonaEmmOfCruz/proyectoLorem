@@ -1,0 +1,743 @@
+:root {
+    --bg:rgba(255, 255, 255, 0.25);
+    --border: rgba(255, 255, 255, 0.3);
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --blur: blur(12px);
+
+    --primary: #00c6ff;
+    --secondary: #0072ff;
+    --accent: #6c5ce7;
+    --glow: #74b9ff;
+    --deep: #0a3d62;
+    --soft: #a29bfe;
+
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-liquid: radial-gradient(circle at 10% 30%, #ff9a9e, #fad0c4, #fad0c4, #a1c4fd, #c2e9fb);
+
+    --text-light: rgba(255, 255, 255, 0.95);
+    --text-soft: rgba(255, 255, 255, 0.8);
+    --text-muted: rgba(255, 255, 255, 0.6);
+
+    --border-radius-card: 32px;
+    --border-radius-btn: 60px;
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 60px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2.5rem;
+}
+
+.brand h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    transition: var(--transition-smooth);
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.nav a:hover,
+.nav a.active {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    color: white;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-section h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero-quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-quote p {
+    font-size: 1rem;
+    font-style: italic;
+    color: white;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 32px;
+    padding: 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-smooth);
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+}
+
+.generator-card {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.form {
+    margin: 1.5rem 0;
+}
+
+.param-control {
+    margin-bottom: 2rem;
+}
+
+.param-control label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    padding: 0.9rem 1.5rem;
+    color: white;
+    font-size: 1.1rem;
+    width: 140px;
+    backdrop-filter: blur(5px);
+    transition: var(--transition-smooth);
+    outline: none;
+}
+
+.input:focus {
+    border-color: var(--liquid-primary);
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.input-glow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.toggle-group {
+    display: flex;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: fit-content;
+}
+
+.toggle {
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-btn {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    border-radius: 40px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition-smooth);
+    font-size: 0.95rem;
+}
+
+.toggle input:checked + .toggle-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.btn-liquid {
+    position: relative;
+    padding: 1rem 2rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-liquid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.6s;
+}
+
+.btn-liquid:hover::before {
+    left: 100%;
+}
+
+.btn-liquid:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
+}
+
+.result-section {
+    margin-top: 2rem;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.result-liquid-box {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 1.8rem;
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.2);
+}
+
+.liquid-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    color: rgba(255, 255, 255, 0.5);
+    gap: 1rem;
+}
+
+.liquid-placeholder i {
+    font-size: 3rem;
+    opacity: 0.5;
+}
+
+.btn-copy-liquid {
+    margin-top: 1.2rem;
+    padding: 0.8rem 1.8rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.btn-copy-liquid:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.copy-feedback {
+    margin-left: 0.5rem;
+}
+
+.glass-error {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 71, 87, 0.15);
+    border: 1px solid rgba(255, 71, 87, 0.3);
+    border-radius: 40px;
+    color: #ff6b81;
+    display: none;
+    align-items: center;
+    gap: 0.8rem;
+    backdrop-filter: blur(5px);
+}
+
+.footer {
+    margin-top: 4rem;
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 40px 40px ;
+    padding: 2rem 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.glass-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.3s;
+}
+
+.glass-link:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .header {
+        padding: 1.2rem 1.8rem;
+    }
+
+    .brand h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav {
+        gap: 1rem;
+    }
+
+    .nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .hero-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-quote {
+        padding: 1rem 1.5rem;
+        max-width: 90%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1.1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .toggle-group {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 40px;
+    }
+
+    .brand h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .hero-section h2 span {
+        font-size: 1.2rem;
+    }
+
+    .hero-quote {
+        border-radius: 30px;
+        padding: 1rem;
+    }
+
+    .hero-quote p {
+        font-size: 0.9rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-panels {
+        order: 1;
+    }
+
+    .generator-panel {
+        order: 2;
+    }
+
+    .card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .input-wrapper {
+        display: block;
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .toggle-group {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .toggle {
+        width: 100%;
+    }
+
+    .toggle-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .btn-liquid {
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .result-liquid-box {
+        padding: 1.2rem;
+        min-height: 150px;
+        max-height: 300px;
+    }
+
+    .btn-copy-liquid {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-brand {
+        justify-content: center;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0.8rem;
+        margin: 0.5rem auto;
+    }
+
+    .header {
+        padding: 1.2rem;
+        border-radius: 30px;
+    }
+
+    .brand h1 {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.8rem;
+    }
+
+    .nav {
+        gap: 0.5rem;
+    }
+
+    .nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .hero-section {
+        margin-bottom: 2rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section h2 span {
+        font-size: 1rem;
+    }
+
+    .hero-quote {
+        border-radius: 20px;
+        padding: 0.8rem;
+    }
+
+    .hero-quote p {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+        border-radius: 24px;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .param-control {
+        margin-bottom: 1.5rem;
+    }
+
+    .param-control label {
+        font-size: 0.95rem;
+    }
+
+    .input {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .toggle-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-liquid {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .result-header {
+        font-size: 0.95rem;
+    }
+
+    .result-liquid-box {
+        padding: 1rem;
+        min-height: 120px;
+        font-size: 0.85rem;
+    }
+
+    .liquid-placeholder {
+        height: 100px;
+    }
+
+    .liquid-placeholder i {
+        font-size: 2rem;
+    }
+
+    .btn-copy-liquid {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .glass-error {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        margin-top: 2rem;
+        padding: 1.5rem 1.5rem 0.8rem;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .footer-content {
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .footer-brand {
+        font-size: 1rem;
+    }
+
+    .glass-link {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-info p {
+        font-size: 0.85rem;
+    }
+}
